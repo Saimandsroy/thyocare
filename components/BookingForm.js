@@ -154,6 +154,11 @@ export default function BookingForm() {
             setSubmitStatus('success');
             setStatusMessage('Booking submitted successfully! We will contact you shortly.');
 
+            // Track Lead event in Meta Pixel
+            if (typeof window !== 'undefined' && typeof window.fbq !== 'undefined') {
+                window.fbq('track', 'Lead');
+            }
+
             // Reset form
             setFormData({
                 name: '',
