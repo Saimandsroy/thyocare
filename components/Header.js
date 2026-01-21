@@ -19,8 +19,8 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white shadow-lg py-2'
-                    : 'bg-white/95 backdrop-blur-sm py-3'
+                ? 'bg-white shadow-lg py-2'
+                : 'bg-white/95 backdrop-blur-sm py-3'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,15 +28,20 @@ export default function Header() {
                     {/* Logo with Powered by */}
                     <div className="flex items-center space-x-2">
                         <div className="flex flex-col items-start">
-                            <span className="text-[10px] text-gray-500 leading-none">Powered by</span>
-                            <Image
-                                src="https://web-assets.thyrocare.com/thyrocare-booking-assets/_next/images/logo.webp"
-                                alt="Thyrocare Logo"
-                                width={120}
-                                height={32}
-                                className="h-6 sm:h-8 w-auto"
-                                priority
-                            />
+                            <span className="text-[10px] text-gray-500 leading-none">Powered by Thyrocare</span>
+                            <div className="flex items-center gap-2">
+                                <Image
+                                    src="/images/rhm-logo.png"
+                                    alt="RHM India Logo"
+                                    width={140}
+                                    height={40}
+                                    className="h-8 sm:h-10 w-auto"
+                                    priority
+                                />
+                                <span className="font-bold text-gray-800 text-sm sm:text-xl">
+                                    RHM India
+                                </span>
+                            </div>
                         </div>
                     </div>
 

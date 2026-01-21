@@ -10,18 +10,37 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Brand */}
                     <div>
-                        <Image
-                            src="https://web-assets.thyrocare.com/thyrocare-booking-assets/_next/images/logo.webp"
-                            alt="Thyrocare Logo"
-                            width={150}
-                            height={40}
-                            className="h-10 w-auto bg-white rounded-lg p-2 mb-4"
-                        />
-                        <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                            India's first and most advanced Totally Automated Laboratory.
-                            Tests you can trust.
+                        <div className="flex items-center gap-3 mb-4">
+                            <Image
+                                src="/images/rhm-logo.png"
+                                alt="RHM India Logo"
+                                width={60}
+                                height={60}
+                                className="h-14 w-auto bg-white rounded-lg p-1"
+                            />
+                            <div>
+                                <p className="font-bold text-lg">RHM India</p>
+                                <p className="text-xs text-gray-400">Diagnostic Centre</p>
+                            </div>
+                        </div>
+                        <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                            Your trusted partner for accurate and affordable pathology services.
                         </p>
-                        <p className="text-gray-400 text-xs">
+                        <div className="flex items-center gap-2 mb-2">
+                            <Image
+                                src="/images/manish-gandhi.jpg"
+                                alt="Manish Gandhi"
+                                width={32}
+                                height={32}
+                                className="rounded-full border border-yellow-400 object-cover"
+                                style={{ width: '32px', height: '32px' }}
+                            />
+                            <div>
+                                <p className="text-sm font-medium text-white">Manish Gandhi</p>
+                                <p className="text-xs text-gray-500">Founder</p>
+                            </div>
+                        </div>
+                        <p className="text-gray-500 text-xs">
                             Powered by Thyrocare Technologies Ltd.
                         </p>
                     </div>
@@ -91,7 +110,7 @@ export default function Footer() {
                 <div className="mt-12 pt-8 border-t border-gray-800">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className="text-gray-400 text-sm text-center md:text-left">
-                            © {currentYear} Thyrocare Services. All rights reserved.
+                            © {currentYear} RHM India Diagnostic Centre. All rights reserved.
                         </p>
                         <div className="flex items-center space-x-6">
                             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

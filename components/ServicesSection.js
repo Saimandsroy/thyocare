@@ -81,55 +81,59 @@ export default function ServicesSection() {
     };
 
     return (
-        <section id="packages-details" className="py-12 bg-gray-50">
+        <section id="packages-details" className="py-16 bg-gradient-to-b from-white to-slate-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-8">
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                        Tests Included in Packages
+                <div className="text-center mb-12">
+                    <span className="inline-block gradient-rhm text-white px-5 py-1.5 rounded-full text-sm font-semibold mb-4 shadow-lg shadow-teal-500/20">
+                        Our Packages
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+                        Health Checkup <span className="text-gradient">Packages</span>
                     </h2>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-lg">
                         Click on a package to see all included tests
                     </p>
-                    <p className="text-sm text-red-600 mt-2 font-medium">
-                        *10-12 hrs fasting is essential
+                    <p className="text-sm text-amber-600 mt-3 font-medium bg-amber-50 inline-block px-4 py-1.5 rounded-full">
+                        ⚠️ 10-12 hrs fasting is essential
                     </p>
                 </div>
 
                 {/* Package Dropdowns */}
-                <div className="space-y-4">
-                    {packages.map((pkg) => (
+                <div className="space-y-5">
+                    {packages.map((pkg, index) => (
                         <div
                             key={pkg.id}
-                            className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
+                            className="bg-white rounded-2xl shadow-premium overflow-hidden border border-gray-100 glow-hover"
+                            style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Package Header - Clickable */}
                             <button
                                 onClick={() => togglePackage(pkg.id)}
-                                className="w-full px-4 sm:px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                className="w-full px-5 sm:px-6 py-5 flex items-center justify-between hover:bg-gradient-to-r hover:from-slate-50 hover:to-white transition-all duration-300"
                             >
                                 <div className="flex-1 text-left">
-                                    <div className="flex flex-wrap items-center gap-2">
+                                    <div className="flex flex-wrap items-center gap-2 mb-2">
                                         <h3 className="text-lg font-bold text-gray-900">
                                             {pkg.name}
                                         </h3>
-                                        <span className="bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full">
-                                            {pkg.parameters} Parameters
+                                        <span className="gradient-rhm text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                                            {pkg.parameters} Tests
                                         </span>
                                     </div>
-                                    <div className="flex items-center space-x-2 mt-1">
-                                        <span className="text-xl font-bold text-green-600">₹{pkg.price.toLocaleString()}</span>
+                                    <div className="flex items-center space-x-3">
+                                        <span className="text-2xl font-bold text-teal-600">₹{pkg.price.toLocaleString()}</span>
                                         <span className="text-sm text-gray-400 line-through">₹{pkg.originalPrice.toLocaleString()}</span>
-                                        <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded">
+                                        <span className="text-xs bg-gradient-to-r from-red-500 to-pink-500 text-white px-2.5 py-1 rounded-full font-semibold shadow-sm">
                                             {Math.round((1 - pkg.price / pkg.originalPrice) * 100)}% OFF
                                         </span>
                                     </div>
                                 </div>
-                                <div className="ml-4">
+                                <div className="ml-4 p-2 rounded-full bg-gray-100 group-hover:bg-teal-100 transition-colors">
                                     {expandedPackage === pkg.id ? (
-                                        <ChevronUp className="w-6 h-6 text-gray-500" />
+                                        <ChevronUp className="w-5 h-5 text-teal-600" />
                                     ) : (
-                                        <ChevronDown className="w-6 h-6 text-gray-500" />
+                                        <ChevronDown className="w-5 h-5 text-gray-500" />
                                     )}
                                 </div>
                             </button>

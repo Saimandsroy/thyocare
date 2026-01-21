@@ -9,36 +9,22 @@ export default function AboutSection() {
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
                     {/* Left - Image/Branding */}
                     <div className="relative">
-                        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 sm:p-12 text-white">
-                            <div className="flex items-center space-x-4 mb-6">
-                                <Image
-                                    src="https://web-assets.thyrocare.com/thyrocare-booking-assets/_next/images/logo.webp"
-                                    alt="Thyrocare Logo"
-                                    width={180}
-                                    height={50}
-                                    className="h-12 w-auto bg-white rounded-lg p-2"
-                                />
-                            </div>
-                            <h3 className="text-3xl font-bold mb-4">
-                                Tests You Can Trust
-                            </h3>
-                            <p className="text-blue-100 mb-6 leading-relaxed">
-                                Thyrocare is India's first and most advanced Totally Automated Laboratory
-                                having its presence in India and worldwide. We are NABL and CAP accredited,
-                                ensuring the highest quality standards in diagnostic services.
-                            </p>
-
-                            {/* Accreditations */}
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
-                                    <Shield className="w-10 h-10 mx-auto mb-2" />
-                                    <p className="text-sm font-medium">NABL Accredited</p>
-                                    <p className="text-xs text-blue-200">100% Labs Certified</p>
-                                </div>
-                                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
-                                    <Award className="w-10 h-10 mx-auto mb-2" />
-                                    <p className="text-sm font-medium">CAP Certified</p>
-                                    <p className="text-xs text-blue-200">Since 2007</p>
+                        <div className="rounded-3xl overflow-hidden shadow-xl">
+                            <Image
+                                src="/images/center-signage.jpg"
+                                alt="RHM India Diagnostic Centre"
+                                width={600}
+                                height={400}
+                                className="w-full h-auto object-cover"
+                            />
+                        </div>
+                        {/* Floating Badge */}
+                        <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg max-w-xs hidden sm:block">
+                            <div className="flex items-center space-x-3">
+                                <Shield className="w-10 h-10 text-blue-600" />
+                                <div>
+                                    <p className="font-bold text-gray-900">Certified Lab</p>
+                                    <p className="text-xs text-gray-500">NABL & CAP Accredited</p>
                                 </div>
                             </div>
                         </div>
@@ -47,15 +33,14 @@ export default function AboutSection() {
                     {/* Right - Details */}
                     <div>
                         <span className="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                            About Us
+                            About RHM India
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                            Your Trusted Partner in Healthcare
+                            RHM India Diagnostic Centre
                         </h2>
                         <p className="text-gray-600 mb-6 leading-relaxed">
-                            With over two decades of experience, Thyrocare has been at the forefront of
-                            preventive healthcare in India. Our commitment to accuracy, affordability,
-                            and accessibility has made us the preferred choice for millions of customers.
+                            Founded by <strong className="text-gray-900">Manish Gandhi</strong>, RHM India Diagnostic Centre, powered by Thyrocare, is your trusted partner for accurate and affordable pathology services.
+                            We bring world-class diagnostic facilities to your neighborhood, ensuring precise reports and timely delivery.
                         </p>
 
                         {/* Features List */}
@@ -85,6 +70,24 @@ export default function AboutSection() {
                                 <div>
                                     <h4 className="font-semibold text-gray-900">Accurate & Reliable</h4>
                                     <p className="text-gray-600 text-sm">9 out of 10 doctors trust Thyrocare reports</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Founder Card */}
+                        <div className="bg-gradient-to-r from-teal-50 to-blue-50 rounded-xl p-4 border border-teal-100">
+                            <div className="flex items-center space-x-4">
+                                <Image
+                                    src="/images/manish-gandhi.jpg"
+                                    alt="Manish Gandhi - Founder"
+                                    width={60}
+                                    height={60}
+                                    className="rounded-full border-2 border-teal-500 object-cover"
+                                    style={{ width: '60px', height: '60px' }}
+                                />
+                                <div>
+                                    <p className="font-bold text-gray-900">Manish Gandhi</p>
+                                    <p className="text-sm text-teal-600">Founder & Managing Director</p>
                                 </div>
                             </div>
                         </div>

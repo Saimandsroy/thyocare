@@ -189,9 +189,9 @@ export default function BookingForm() {
     };
 
     return (
-        <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-md">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">Book Your Test</h3>
-            <p className="text-gray-600 mb-6">Fill the form below and we'll contact you</p>
+        <div className="glass-premium rounded-3xl shadow-premium-lg p-6 sm:p-8 w-full max-w-md border border-white/50 animate-fadeInUp">
+            <h3 className="text-2xl font-bold text-gray-800 mb-1">Book Your Test</h3>
+            <p className="text-gray-600 mb-6 text-sm">Fill the form below and we'll contact you</p>
 
             {/* Status Message */}
             {submitStatus && (
@@ -301,9 +301,9 @@ export default function BookingForm() {
                 <button
                     type="submit"
                     disabled={isLoading}
-                    className={`w-full py-4 rounded-lg font-semibold text-white transition-all ${isLoading
-                        ? 'bg-blue-400 cursor-not-allowed'
-                        : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-0.5'
+                    className={`w-full py-4 rounded-xl font-semibold text-white transition-all duration-300 ${isLoading
+                        ? 'bg-gray-400 cursor-not-allowed'
+                        : 'gradient-rhm hover:shadow-xl hover:shadow-teal-500/30 transform hover:-translate-y-1 active:scale-[0.98]'
                         }`}
                 >
                     {isLoading ? (
@@ -312,7 +312,7 @@ export default function BookingForm() {
                             <span>Submitting...</span>
                         </span>
                     ) : (
-                        'Book Now'
+                        'Book Now - Free Home Collection'
                     )}
                 </button>
             </form>

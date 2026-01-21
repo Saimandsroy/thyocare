@@ -134,3 +134,90 @@ html {
 .icon-hover:hover {
   transform: scale(1.1) rotate(5deg);
 }
+
+/* ============================ */
+/* PREMIUM DESIGN ENHANCEMENTS  */
+/* ============================ */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Premium glassmorphism */
+.glass-premium {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium soft shadows */
+.shadow-premium {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 20px 25px -5px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-premium-lg {
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.06),
+    0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card glow effect on hover */
+.glow-hover {
+  transition: all 0.4s ease;
+}
+
+.glow-hover:hover {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 10px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #0d9488 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* RHM Brand Gradient */
+.gradient-rhm {
+  background: linear-gradient(135deg, #0d9488 0%, #0891b2 50%, #0284c7 100%);
+}
+
+.gradient-rhm-light {
+  background: linear-gradient(135deg, #ccfbf1 0%, #cffafe 50%, #e0f2fe 100%);
+}
+

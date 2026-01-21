@@ -5,9 +5,9 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Thyrocare Services - Book Health Checkup Packages | Up to 50% OFF',
-    description: 'Book your health checkup packages with Thyrocare. NABL & CAP accredited labs. Aarogyam packages starting at ₹1,399. Home sample collection available.',
-    keywords: 'health checkup, thyrocare, blood test, health packages, diagnostics, aarogyam',
+    title: 'RHM India Diagnostic Centre - Powered by Thyrocare | Best Pathology Lab',
+    description: 'RHM India Diagnostic Centre powered by Thyrocare. Full body checkups, blood tests, and pathology services with home sample collection. NABL & CAP accredited.',
+    keywords: 'RHM India, diagnostic centre, pathology lab, thyrocare, blood test, health packages, diagnostics, aarogyam',
 };
 
 export default function RootLayout({ children }) {
@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
                     `}
                 </Script>
                 <noscript>
-                    <img 
-                        height="1" 
-                        width="1" 
+                    <img
+                        height="1"
+                        width="1"
                         style={{ display: 'none' }}
                         src="https://www.facebook.com/tr?id=1136032585095699&ev=PageView&noscript=1"
                         alt=""
