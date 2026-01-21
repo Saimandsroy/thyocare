@@ -1,8 +1,12 @@
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    display: 'swap'
+});
 
 export const metadata = {
     title: 'RHM India Diagnostic Centre - Powered by Thyrocare | Best Pathology Lab',
@@ -40,7 +44,7 @@ export default function RootLayout({ children }) {
                 </noscript>
                 {/* End Meta Pixel Code */}
             </head>
-            <body className={inter.className}>{children}</body>
+            <body className={poppins.className}>{children}</body>
         </html>
     );
 }
